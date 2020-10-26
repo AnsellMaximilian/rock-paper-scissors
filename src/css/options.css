@@ -1,0 +1,102 @@
+.game-option{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+}
+
+#player > .game-option {
+    transform: scaleX(-1);
+}
+
+.option-rock, .option-paper, .option-scissors {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 65%;
+    transform: translate(50%, -50%);
+}
+
+.option-rock{
+    background-color: red;
+}
+
+.option-rock::before {
+    content: "";
+    height: 100%;
+    width: 60%;
+    background-color: red;
+    position: absolute;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+.option-rock::after {
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: red;
+    position: absolute;
+    top: -10%;
+    right: 10%;
+    border-radius: 50%;
+}
+
+.option-paper{
+    background-color: green;
+}
+
+.option-paper::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: green;
+    position: absolute;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.option-paper::after {
+    content: "";
+    height: 30%;
+    width: 75%;
+    background-color: green;
+    position: absolute;
+    top: -10%;
+    right: 10%;
+    transform: rotate(-40deg);
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.option-scissors{
+    background-color: blue;
+}
+
+.option-scissors::before{
+    content: "";
+    height: 25%;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    top: 5%;
+    transform: rotate(-15deg);
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+
+.option-scissors::after{
+    content: "";
+    height: 25%;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    top: 45%;
+    transform: rotate(15deg);
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+

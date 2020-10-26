@@ -8,7 +8,8 @@ class Gameboard extends React.Component {
     render(){
         return(
             <div id="gameboard" >
-
+                <Computer/>
+                <Player/>
             </div>
         )
     }
