@@ -1,0 +1,32 @@
+#scoreboard {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#scoreboard::before {
+    content: "VS";
+    color: white;
+    display: inline-block;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 5em;
+}
+
+#computer-score, #player-score{
+    background-color: white;
+    width: 200px;
+    height: 100px;
+    box-shadow:  5px 5px 5px var(--box-shadow-color);
+}
+
+#computer-score {
+    border-bottom-right-radius: 35%;
+    box-shadow:  5px 5px 5px var(--box-shadow-color);
+}
+
+#player-score {
+    border-bottom-left-radius: 35%;
+    box-shadow:  -5px 5px 5px var(--box-shadow-color);
+}

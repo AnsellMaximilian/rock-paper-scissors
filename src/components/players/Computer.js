@@ -6,12 +6,12 @@ import Paper from '../options/Paper';
 import Scissors from '../options/Scissors';
 
 class Computer extends React.Component {
+    
     render(){
+        const options = [<Rock/>, <Paper/>, <Scissors/>]
         return(
             <div id="computer">
-                <Rock/>
-                <Paper/>
-                <Scissors/>
+                {options[Math.floor(Math.random() * 3)]}
             </div>
         )
     }

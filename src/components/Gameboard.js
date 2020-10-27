@@ -4,6 +4,9 @@ import React from 'react';
 import Computer from './players/Computer';
 import Player from './players/Player';
 
+//css
+import '../css/gameboard.css'
+
 class Gameboard extends React.Component {
     render(){
         return(

@@ -7,11 +7,10 @@ import Scissors from '../options/Scissors';
 
 class Player extends React.Component {
     render(){
+        const options = [<Rock/>, <Paper/>, <Scissors/>]
         return(
             <div id="player">
-                <Rock/>
-                <Paper/>
-                <Scissors/>
+                {options[Math.floor(Math.random() * 3)]}
             </div>
         )
     }
