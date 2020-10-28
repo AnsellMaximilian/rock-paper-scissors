@@ -8,6 +8,14 @@
     box-shadow:  5px 5px 5px var(--box-shadow-color);
 }
 
+#computer > .game-option:active {
+    animation: play-computer 2s;
+}
+
+#player > .game-option:active {
+    animation: play-player 2s;
+}
+
 #player > .game-option {
     transform: scaleX(-1);
 }
@@ -102,3 +110,32 @@
     border-bottom-right-radius: 20%;
 }
 
+@keyframes play-player {
+    0%{
+        top: 0;
+        right: 0;
+    }
+    65%{
+        top: -10%;
+        right: 0;
+    }
+    100%{
+        top: 0;
+        right: 120%;
+    }
+}
+
+@keyframes play-computer {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    65%{
+        top: -10%;
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 120%;
+    }
+}

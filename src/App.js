@@ -15,6 +15,7 @@ class App extends React.Component {
       
       computerChoice: 0,
       playerChoice: 0,
+
     }
   }
 
@@ -50,9 +51,30 @@ class App extends React.Component {
     this.setState(state => ({
       playerChoice,
       computerChoice,
-      computerScore: winner === 'computer' ? (state.computerScore + 1) : state.computerScore,
-      playerScore:  winner === 'player' ? (state.playerScore + 1) : state.playerScore
-    }))
+    }), () => {
+      //Add animation for playing a round
+      document.querySelector('#computer > .game-option').style.animation = 'play-computer 1.5s';
+      document.querySelector('#player > .game-option').style.animation = 'play-player 1.5s';
+      // Remove buttons so player has to wait for animation
+      document.querySelectorAll('.option-button').forEach(element => {
+        element.style.visibility = 'hidden';
+      })
+      setTimeout(() => {
+        // Remove animation for playing a round
+        document.querySelector('#computer > .game-option').style.animation = 'none';
+        document.querySelector('#player > .game-option').style.animation = 'none';
+        // Reappend buttons
+        document.querySelectorAll('.option-button').forEach(element => {
+          element.style.visibility = 'visible';
+        })
+        //Update score after animation
+        this.setState(state => ({
+          computerScore: winner === 'computer' ? (state.computerScore + 1) : state.computerScore,
+          playerScore:  winner === 'player' ? (state.playerScore + 1) : state.playerScore,
+        }));
+      }, 1500)
+    })
+
   }
 
   render(){
