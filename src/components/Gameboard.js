@@ -24,7 +24,7 @@ class Gameboard extends React.Component {
 
         return(
             <div id="gameboard" >
-                <Computer choice={this.props.computerChoice} playing={this.props.playing}/>
+                <Computer choice={this.props.computerChoice}/>
                 <div id="play-result">
                     <span id="play-result-status">
                         {statusMsg}
