@@ -11,5 +11,56 @@
     position: relative;
     transform: scaleX(-1);
     cursor: pointer;
+    margin: 0 20px;
+    box-shadow: 5px 5px 5px var(--box-shadow-color);
+}
+
+.option-button:hover::before{
+    animation: button-label-fly 0.25s;
+}
+
+.option-button:hover {
+    background-color: rgb(235, 0, 0);
+}
+
+#option-button-rock:hover::before{
+    content: "Rock";
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    top: -25%;
+    right: 50%;
+    transform: scaleX(-1) translateX(-50%);
+}
+
+#option-button-paper:hover::before{
+    content: "Paper";
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    top: -25%;
+    right: 50%;
+    transform: scaleX(-1) translateX(-50%);
+}
+
+#option-button-scissors:hover::before{
+    content: "Scissors";
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    top: -25%;
+    right: 50%;
+    transform: scaleX(-1) translateX(-50%);
+}
+
+@keyframes button-label-fly {
+    from{
+        top: 0;
+        opacity: 0;
+    }
+    to{
+        top: -25%;
+        opacity: 1;
+    }
 }
 

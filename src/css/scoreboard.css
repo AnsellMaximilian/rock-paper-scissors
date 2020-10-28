@@ -16,9 +16,14 @@
 
 #computer-score, #player-score{
     background-color: white;
-    width: 200px;
+    width: 20%;
     height: 100px;
+    min-width: 120px;
     box-shadow:  5px 5px 5px var(--box-shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
 }
 
 #computer-score {
@@ -26,7 +31,59 @@
     box-shadow:  5px 5px 5px var(--box-shadow-color);
 }
 
+#computer-icon{
+    background-color: gray;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    margin-right: 20px;
+}
+
+#computer-icon::before{
+    content: "";
+    width: 75%;
+    height: 75%;
+    background-color: black;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+#computer-icon::after {
+    content: "";
+    width: 50%;
+    height: 90%;
+    background-color: gray;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(-110%, -50%);
+}
+
 #player-score {
     border-bottom-left-radius: 35%;
     box-shadow:  -5px 5px 5px var(--box-shadow-color);
+}
+
+#player-icon{
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+    margin-left: 20px;
+}
+
+#player-icon::before{
+    content: "";
+    width: 60%;
+    height: 60%;
+    background-color: gray;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -155%);
+    border-radius: 50%;
 }
