@@ -11,7 +11,7 @@ class Computer extends React.Component {
         const options = [<Rock/>, <Paper/>, <Scissors/>]
         return(
             <div id="computer">
-                {options[Math.floor(Math.random() * 3)]}
+                {options[this.props.choice]}
             </div>
         )
     }

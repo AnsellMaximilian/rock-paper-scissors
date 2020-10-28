@@ -10,7 +10,7 @@ class Player extends React.Component {
         const options = [<Rock/>, <Paper/>, <Scissors/>]
         return(
             <div id="player">
-                {options[Math.floor(Math.random() * 3)]}
+                {options[this.props.choice]}
             </div>
         )
     }

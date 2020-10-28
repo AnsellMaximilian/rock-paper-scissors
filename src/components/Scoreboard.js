@@ -7,11 +7,11 @@ class Scoreboard extends React.Component {
         return(
             <div id="scoreboard">
                 <div id="computer-score">
-                    2
+                    <span id="computer-score-text">{this.props.computerScore}</span>
                 </div>
 
                 <div id="player-score">
-                    4
+                    <span id="player-score-text">{this.props.playerScore}</span>
                 </div>
             </div>
         )

@@ -1,0 +1,15 @@
+
+.option-button {
+    padding: 50px;
+    padding: 50px;
+    display: inline-block;
+    background-color: red;
+    color: white;
+    margin: 0 auto;
+    border-radius: 25%;
+    box-sizing: border-box;
+    position: relative;
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+

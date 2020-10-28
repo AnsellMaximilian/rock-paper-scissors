@@ -11,8 +11,8 @@ class Gameboard extends React.Component {
     render(){
         return(
             <div id="gameboard" >
-                <Computer/>
-                <Player/>
+                <Computer choice={this.props.computerChoice}/>
+                <Player choice={this.props.playerChoice}/>
             </div>
         )
     }

@@ -1,8 +1,8 @@
 .game-option{
     background-color: rgb(117, 117, 117);
     border: 5px white solid;
-    width: 200px;
-    height: 200px;
+    width: 20vw;
+    height: 20vw;
     border-radius: 50%;
     position: relative;
     box-shadow:  5px 5px 5px var(--box-shadow-color);
