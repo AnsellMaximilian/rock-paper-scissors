@@ -16,6 +16,7 @@ class App extends React.Component {
       computerChoice: 0,
       playerChoice: 0,
 
+      winner: ''
     }
   }
 
@@ -59,6 +60,8 @@ class App extends React.Component {
       document.querySelectorAll('.option-button').forEach(element => {
         element.style.visibility = 'hidden';
       })
+      // Remove play result
+      document.querySelector('#play-result').style.display = "none";
       setTimeout(() => {
         // Remove animation for playing a round
         document.querySelector('#computer > .game-option').style.animation = 'none';
@@ -67,10 +70,13 @@ class App extends React.Component {
         document.querySelectorAll('.option-button').forEach(element => {
           element.style.visibility = 'visible';
         })
+        // Show play result
+        document.querySelector('#play-result').style.display = "block";
         //Update score after animation
         this.setState(state => ({
           computerScore: winner === 'computer' ? (state.computerScore + 1) : state.computerScore,
           playerScore:  winner === 'player' ? (state.playerScore + 1) : state.playerScore,
+          winner
         }));
       }, 1500)
     })
@@ -81,7 +87,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Scoreboard computerScore={this.state.computerScore} playerScore={this.state.playerScore}/>
-        <Gameboard computerChoice={this.state.computerChoice} playerChoice={this.state.playerChoice}/>
+        <Gameboard computerChoice={this.state.computerChoice} playerChoice={this.state.playerChoice} winner={this.state.winner}/>
         <Actionboard play={this.play}/>
       </div>
     );

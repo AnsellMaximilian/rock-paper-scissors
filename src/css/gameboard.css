@@ -1,4 +1,26 @@
 #gameboard {
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+#play-result{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    color: white;
+    display: none;
+}
+
+#play-result span {
+    display: block;
+}
+
+#play-result-status {
+    font-size: 30px;
+}
+
+#play-result-result {
+    font-size: 20px;
 }
